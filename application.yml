@@ -1,12 +1,12 @@
 ipDbPath: ip2region.xdb
-ip: &ip 172.24.212.41
+ip: &ip 127.0.0.1
 server:
   apiPrefix: /api/v1 # 全局api的前缀
   addr: :8888 #监听端口
   readTimeOut: 10 #单位秒
   writeTimeOut: 10 #单位秒
 db:
-  database: mysql #数据库厂商
+  database: mysql #数据库
   host: *ip #远程数据库host
   port: 3306 #数据库端口
   username: root #数据库账号
@@ -14,8 +14,8 @@ db:
   dbname: test #数据库下的某个库
   timezone: Asia/Shanghai #数据库的时区
 email:
-  username: shuyuzheng19@163.com #smtp账号
-  password: ONXVXWJZQYQNOKBH #smtp密码
+  username:  #smtp账号
+  password:  #smtp密码
   host: smtp.163.com #远程host
   addr: smtp.163.com:25 #远程地址
 logger:
@@ -33,7 +33,7 @@ redis:
   min_idle: 2  #最小连接
   timeout: 10 #连接超时 单位秒
 upload:
-  maxImageSize: 5 #允许上传图片的最大大小
-  maxFileSize: 300 #允许上传文件的最大大小
-  uri: http://localhost:8888/static #上传完毕之后 url的前缀
-  path: F:/blog/static #将上传的图片保存到某个位置
+  maxImageSize: 5 #允许上传图片的最大大小 单位mb
+  maxFileSize: 300 #允许上传文件的最大大小 单位mb
+  uri:  #上传完毕之后 url的前缀
+  path:  #将上传的图片保存到某个位置
